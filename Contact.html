@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Background.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .background-image {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px; /* sau altă dimensiune dorită */
+            height: auto;
+            object-fit: contain;
+            z-index: 1;
+            opacity: 0.8; /* poți ajusta transparența */
+        }
+
+        /* Asigurăm că conținutul principal nu se suprapune cu imaginea */
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            margin-right: 420px; /* spațiu pentru imagine */
+        }
+        .contact-info {
+            margin: 20px 0;
+        }
+        .contact-item {
+            margin: 20px 0;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .contact-button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+        }
+        .contact-button:hover {
+            background-color: #0052a3;
+        }
+        .copy-button {
+            background-color: #28a745;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+        .call-button {
+            background-color: #0066cc;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background-color: #24292e;
+            color: white !important;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none !important;
+            box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+
+        .github-button:hover {
+            transform: translateY(-2px);
+            background-color: #2c3238;
+            box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .github-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+        }
+
+        .github-icon {
+            margin-right: 4px;
+        }
+
+        .linkedin-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background-color: #0077b5;
+            color: white !important;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none !important;
+            box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+
+        .linkedin-button:hover {
+            transform: translateY(-2px);
+            background-color: #006396;
+            box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .linkedin-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+        }
+
+        .linkedin-icon {
+            margin-right: 4px;
+            fill: white;
+        }
+
+        /* Adăugăm stilul pentru titlul în stil VS Code */
+        .vscode-title {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 24px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 1px solid #3c3c3c;
+        }
+
+        .tech-images-container {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .tech-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .image-description {
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tech-images-container">
+        <img src="Battery.jpg" class="tech-image">
+        <p class="image-description">My interest for tech industry</p>
+        <img src="Tech3.png" class="tech-image">
+    </div>
+    <div class="content">
+        <h1 class="vscode-title">Contact</h1>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Phone:</strong> 
+                <span id="phoneNumber">0787511097</span>
+                <div class="button-group">
+                    <button onclick="copyPhoneNumber()" class="contact-button copy-button">
+                        📋 Copy
+                    </button>
+                    <a href="https://wa.me/40787511097" target="_blank" class="contact-button whatsapp-button">
+                        💬 WhatsApp
+                    </a>
+                    <a href="tel:0787511097" class="contact-button call-button">
+                        📞 Call
+                    </a>
+                </div>
+            </div>
+            <div class="contact-item">
+             
+                <a href="https://github.com/DeftaAndrei" target="_blank" class="github-button">
+                    <svg height="16" viewBox="0 0 16 16" width="16" class="github-icon">
+                        <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    GitHub Profile
+                </a>
+            </div>
+            <div class="contact-item">
+             
+                <a href="https://www.linkedin.com/in/andrei-defta-6122501a0/" target="_blank" class="linkedin-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="linkedin-icon">
+                        <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyPhoneNumber() {
+            const phoneNumber = document.getElementById('phoneNumber').textContent;
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                alert('Phone number copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

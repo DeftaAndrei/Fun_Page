@@ -1,0 +1,291 @@
+<link rel="stylesheet" href="style.css">
+<script defer src="an.js"></script>
+<style>
+    body {
+        background-image: url('bc.webp');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .profile-picture {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #333;
+    }
+    .profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .machine-learning-section, .developer-section, .small-ml-section {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        display: inline-block;
+        vertical-align: top;
+        background: transparent; /* Ensures these sections remain transparent */
+    }
+    .machine-learning-section h2, .developer-section h2, .small-ml-section h2 {
+        color: #003366;
+    }
+    .developer-section h2 {
+        color: #4B0082;
+        font-size: 24px;
+    }
+    .machine-learning-section img, .developer-section img {
+        width: 600px;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #333;
+        margin-top: 10px;
+    }
+    .small-ml-section img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #333;
+        margin-top: 10px;
+    }
+    .bottom-image {
+        width: 100%;
+        margin-top: 0; /* Eliminăm spațiul dintre video și imagine */
+        overflow: hidden;
+    }
+    
+    .bottom-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .video-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto 0; /* Eliminăm marginea de jos */
+        overflow: hidden;
+        position: relative;
+        padding: 0 20px;
+    }
+    
+    .video-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        max-height: 80vh;
+        margin-bottom: 0; /* Eliminăm orice margine de jos */
+    }
+
+    /* Media queries pentru diferite dimensiuni de ecran */
+    @media screen and (max-width: 768px) {
+        .video-container {
+            padding: 0 10px;
+            margin: 10px auto 0; /* Păstrăm doar marginea de sus */
+        }
+    }
+
+    @media screen and (min-width: 1920px) {
+        .video-container {
+            max-width: 1600px;
+        }
+    }
+
+    .button-container {
+        position: relative;
+        margin: 20px 0;
+        padding: 0 80px; /* Spațiu pentru linii în ambele părți */
+    }
+
+    .button {
+        position: relative;
+        /* stilurile existente pentru buton rămân la fel */
+    }
+
+    /* Adăugăm liniile din stânga */
+    .button::before {
+        content: '';
+        position: absolute;
+        left: -80px;
+        top: 50%;
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #00ff00);
+        transform: translateY(-50%);
+    }
+
+    /* Adăugăm liniile din dreapta */
+    .button::after {
+        content: '';
+        position: absolute;
+        right: -80px;
+        top: 50%;
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(to left, transparent, #00ff00);
+        transform: translateY(-50%);
+    }
+
+    /* Adăugăm săgețile pentru ambele părți */
+    .button .arrow-left {
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        color: #00ff00;
+        transform: translateY(-50%);
+        font-size: 20px;
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+
+    .button .arrow-right {
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        color: #00ff00;
+        transform: translateY(-50%);
+        font-size: 20px;
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+
+    /* Adăugăm efecte de hover pentru linii */
+    .button:hover::before,
+    .button:hover::after {
+        background: linear-gradient(to right, rgba(0, 255, 0, 0.3), #00ff00);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+</style>
+</head>
+<body>
+<!-- Header cu date de conct-->
+<header>
+    <h1>  Defta Andrei Robert</h1>
+    <p>  Bucuresti|  Email ddeftaandrei@gmail.com</p>
+    <p>  LinkedIn : https://www.linkedin.com/in/andrei-defta-6122501a0/</p>
+    <p><strong>Rol:</strong> Future Developer Full-Stack</p>
+</header>
+<div class="profile-picture">
+    <img src="CV.jpeg" alt="Poza Defta Andrei Robert">
+</div>
+
+<!-- Professional Summary -->
+<section id="summary" class="fade-in">
+    <h2>About Me</h2>
+    <p>
+        I am a student at UTCB, specializing in Automation and Applied Computer Science, passionate about programming and technology.
+        I enjoy learning new things and working on projects.
+        I like to learn, find solutions, and challenge myself with new problems.
+        I am motivated to improve my skills and contribute to interesting projects.
+    </p>
+</section>
+
+<!-- Butoane pentru portofoliu și LinkedIn -->
+<section class="button-container">
+    <button class="button github-button" onclick="window.location.href='https://github.com/DeftaAndrei';">
+        GitHub Portfolio
+    </button>
+    <button class="button linkedin-button" onclick="window.location.href='https://www.linkedin.com/in/andrei-defta-6122501a0/';">
+        LinkedIn Profile
+    </button>
+    <button class="button fun-button" onclick="window.location.href='./Fun_Page.html';">
+        Fun Page
+    </button>
+</section>
+
+<!-- Technical Skills -->
+<section id="skills" class="fade-in">
+    <h2>  Technical Skills</h2>
+    <dl>
+        <!-- Python -->
+        <dt><strong>Python</strong></dt>
+        <dd>
+            I have experience in developing applications using Python, covering the following areas:
+            <ul>
+                <li><strong>Databases:</strong> SQLAlchemy, SQLite, PostgreSQL</li>
+                <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, Plotly</li>
+                <li><strong>Machine Learning:</strong> Scikit-learn, TensorFlow (beginner), Pandas, NumPy</li>
+                <li><strong>Graphical Interfaces:</strong> PyQt5, Tkinter</li>
+                <li><strong>Automation:</strong> Selenium, BeautifulSoup</li>
+            </ul>
+            I have theoretical and practical knowledge in using these libraries, but I wish to deepen my understanding of Machine Learning, including more complex models (using TensorFlow and PyTorch). I am also interested in applying this knowledge in web projects.
+        </dd>
+    </dl>
+</section>
+
+<section id="education" class="fade-in">
+    <h2>  Education</h2>
+    <article>
+        <h3>UTCB Hydrotechnics - Automation and Applied Computer Science</h3>
+        <p><strong>Bachelor's Degree in Computer Science</strong></p>
+        <p>2020–2024</p>
+    </article>
+</section>
+
+<!-- Adăugăm videoclipul cu numele corect -->
+<div class="video-container">
+    <video autoplay loop muted playsinline>
+        <source src="Deftronic.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Imaginea de jos -->
+<div class="bottom-image">
+    <img src="Down0.7.webp" alt="Bottom Image">
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© [2024] Defta Andrei Robert. All rights reserved.</p>
+</footer>
+
+<script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = '01';
+    const fontSize = 24; // Mărit de la 16 la 24 (150% mai mare)
+    const columns = canvas.width / fontSize;
+    const drops = [];
+
+    for (let i = 0; i < columns; i++) {
+        drops[i] = 1;
+    }
+
+    function draw() {
+        ctx.fillStyle = 'rgba(30, 30, 30, 0.03)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#0F0';
+        ctx.font = `bold ${fontSize}px monospace`; // Folosim noua dimensiune
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = chars.charAt(Math.floor(Math.random() * chars.length));
+            const brightness = Math.random();
+            ctx.fillStyle = `rgba(0, 255, 0, ${brightness})`;
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+
+    setInterval(draw, 33);
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
+</body>
+</html>
