@@ -22,3 +22,6 @@ CSS3 (including StyleAbout.css, style.css) - For styling and layout design.
 JavaScript (an.js) - To add interactivity and dynamic behaviors.
 
 Images & Media - Various JPEG, PNG, and WEBP files for visual elements.
+Open Index0.7.html and see my website
+
+https://deftronic.org/
